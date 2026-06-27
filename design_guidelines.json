@@ -1,0 +1,86 @@
+{
+  "project_name": "LEGENDS UNITED",
+  "theme_strategy": "BOTH LIGHT AND DARK (Toggle required)",
+  "primary_archetype": "Archetype 4 (Swiss & High-Contrast) + Premium Materials (Glass, Noise)",
+  "design_philosophy": "Digital HQ. Premium, minimal, elegant. Vercel/Linear quality but original. Emphasize noise overlays, glassmorphism only where appropriate, and a subtle technical grid. Tension through typography and high contrast.",
+  "typography": {
+    "headings": "Satoshi",
+    "body": "Manrope",
+    "mono": "JetBrains Mono",
+    "rules": "Headings MUST use tracking-tight or tracking-tighter. Never use Inter or Roboto. Use fluid scaling for headings (max text-6xl for Hero). Overlines and Badges must be Mono, uppercase, with tracking-widest."
+  },
+  "colors": {
+    "dark_mode": {
+      "background": "#050505",
+      "surface": "#0F0F0F",
+      "border": "rgba(255, 255, 255, 0.1)",
+      "text_primary": "#FFFFFF",
+      "text_secondary": "rgba(255, 255, 255, 0.6)",
+      "accent": "#F5A623",
+      "cyber_accent": "#00FF41"
+    },
+    "light_mode": {
+      "background": "#FAFAFA",
+      "surface": "#FFFFFF",
+      "border": "rgba(0, 0, 0, 0.08)",
+      "text_primary": "#050505",
+      "text_secondary": "rgba(0, 0, 0, 0.6)",
+      "accent": "#F5A623",
+      "cyber_accent": "#00CC33"
+    },
+    "gradients": "Soft ambient mesh gradients powered by CSS (Amber, Slate, Charcoal). PROHIBITED: Purple/Teal/Blue gradients."
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "Generous spacing. Use p-8 to p-12 for bento grid cards. Container gaps gap-6 to gap-8.",
+    "grid_system": "Bento Grid protocol for platform overview. 'Control Room' dense grid for Developer Resources & Cyber News.",
+    "structural_lines": "Subtle 1px border lines globally to create an underlying technical grid."
+  },
+  "components": {
+    "navigation": "Crystal Glassmorphism: backdrop-blur-xl bg-black/60 (dark) or bg-white/70 (light) with 1px delicate inner stroke border-white/10. Sticky top.",
+    "buttons": "Flat solid background with 1px subtle border. Hover state MUST explicitly define higher contrast and slight lift (-translate-y-1).",
+    "cards": "Neumorphic/Glass hybrid. 1px border. Hover effect: 'Tracing Beam' or soft glow.",
+    "badges": "For 'Coming Soon/Beta/Planned': Pill-shaped, Mono font, text-xs, with a soft glowing status dot.",
+    "cyber_news": "List layout. Skeleton loading states must be built with framer-motion pulse. High contrast typography.",
+    "forms": "Use highly customized Shadcn components (Input, Textarea) with transparent backgrounds, bottom-borders, or stark 1px solid borders.",
+    "testing": "All interactive and key informational elements MUST include a `data-testid` attribute."
+  },
+  "motion_and_interaction": {
+    "page_transitions": "Framer Motion opacity and slight y-axis translation (e.g., y: 20 -> 0).",
+    "scroll": "Smooth scrolling via lenis is MANDATORY.",
+    "hover_states": "Transition colors and add subtle drop-shadows on all interactables."
+  },
+  "icons": "lucide-react for basic UI primitives. iconoir-react for sophisticated line icons.",
+  "media": {
+    "textures": "CSS-based SVG noise overlay is REQUIRED globally (pointer-events: none, opacity: 0.03 for light, 0.05 for dark).",
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1604079628040-94301bb21b91?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MTJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHNtb290aCUyMGdyYWRpZW50fGVufDB8fHx8MTc4MjUwMTYxM3ww&ixlib=rb-4.1.0&q=85",
+        "category": "hero_background_fallback",
+        "description": "Warm orange orb on blue gradient. Use with extreme blur and low opacity behind the noise overlay as a fallback if CSS mesh gradients are too complex."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzR8MHwxfHNlYXJjaHwxfHxjeWJlcnNlY3VyaXR5fGVufDB8fHx8MTc4MjUwMTYxM3ww&ixlib=rb-4.1.0&q=85",
+        "category": "cyber_news_thumbnail",
+        "description": "Teal LED panel. Use as an article thumbnail or header image in the Cyber News section."
+      },
+      {
+        "url": "https://images.pexels.com/photos/8453814/pexels-photo-8453814.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "category": "about_workspace",
+        "description": "Contemporary tech office setup. Use in the About or Join Team sections."
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Build the UI strictly with Tailwind CSS, Framer Motion, and raw HTML structural elements.",
+    "Do NOT use .tsx, output .js/.jsx files.",
+    "Implement a robust Dark/Light mode toggle that switches Tailwind's 'dark' class on the document element.",
+    "Create a global noise overlay using a fixed, pointer-events-none SVG pattern.",
+    "For the Future Tools page, use the Bento Grid layout protocol.",
+    "Cyber News page must have framer-motion powered skeleton loaders and fetch mock/live ethical hacking news.",
+    "Add 'data-testid' to all buttons, links, and forms.",
+    "Install @studio-freight/react-lenis (or lenis) for smooth scrolling.",
+    "Install iconoir-react via yarn add iconoir-react.",
+    "Install framer-motion via yarn add framer-motion.",
+    "Do not use default generic fonts for headings; explicitly use Satoshi and configure it in Tailwind."
+  ]
+}
